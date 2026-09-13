@@ -1,78 +1,107 @@
 # NetWatch – Network Monitoring & Diagnostics Tool
 
-## 📌 Project Overview
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python)
+![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey)
+![License](https://img.shields.io/badge/License-Educational-green)
 
-NetWatch is a Python-based network monitoring and diagnostic tool designed to perform basic network troubleshooting tasks.
+NetWatch is a lightweight, Python-based command-line tool for basic network troubleshooting and diagnostics. It demonstrates practical networking concepts such as DNS resolution, TCP sockets, port connectivity, IP addressing, latency, and ICMP ping.
 
-The application provides a simple command-line interface for checking host connectivity, scanning common TCP ports, resolving domain names, identifying the local IP address, and performing ping tests.
+## Features
 
-## 🎯 Objectives
+- **Host Connectivity Check** – Resolves a host and tests TCP connectivity on port 80.
+- **Common Port Scanner** – Checks a predefined list of common TCP ports.
+- **DNS Lookup** – Resolves a domain name to an IPv4 address.
+- **Local IP Detection** – Displays the computer hostname and local IP address.
+- **Ping Test** – Uses the operating system's ping command to test reachability.
+- **Cross-platform logic** – Supports Windows and Unix-like ping syntax.
+- **Simple CLI menu** – Easy to use without external Python packages.
 
-* Understand basic network connectivity.
-* Practice socket programming in Python.
-* Perform DNS resolution.
-* Understand TCP port connectivity.
-* Learn basic network troubleshooting.
-* Automate common diagnostic tasks.
+## Technologies and Concepts
 
-## 🛠️ Technologies Used
+| Technology / Concept | Usage |
+|---|---|
+| Python | Application development |
+| `socket` | DNS, TCP connections, and port checks |
+| `subprocess` | Operating-system ping command |
+| `platform` | Operating-system detection |
+| TCP/IP | Network communication concepts |
+| DNS | Domain-to-IP resolution |
 
-* Python 3
-* Socket Programming
-* TCP/IP
-* DNS
-* ICMP Ping
-* Command-line Interface
+## Project Structure
 
-## ✨ Features
-
-1. **Host Connectivity Check**
-
-   * Resolves the host IP.
-   * Tests TCP connectivity.
-   * Displays response time.
-
-2. **Common Port Scanner**
-
-   * Checks selected TCP ports.
-   * Identifies reachable open ports.
-
-3. **DNS Lookup**
-
-   * Converts a domain name into an IP address.
-
-4. **Local IP Detection**
-
-   * Displays the computer hostname and local IP.
-
-5. **Ping Test**
-
-   * Checks network reachability using the operating system's ping command.
-
-## ▶️ How to Run
-
-```bash
-python netwatch.py
+```text
+network-monitoring-tool/
+├── NetWatch.py
+└── README.md
 ```
 
-## 📚 Networking Concepts Demonstrated
+## Requirements
 
-* IP addresses
-* DNS resolution
-* TCP sockets
-* Port numbers
-* Client-server communication
-* Network latency
-* Connectivity troubleshooting
+- Python 3.8 or later
+- An active network connection for external host tests
 
-## ⚠️ Disclaimer
+No third-party libraries are required.
 
-This tool is intended for educational and authorized network diagnostic purposes only. Do not scan networks or systems without permission.
+## How to Run
 
-## 🔮 Future Enhancements
+1. Clone the repository:
 
-* Add a graphical user interface.
-* Export diagnostic results to a file.
-* Add continuous network monitoring.
-* Display network interface details.
-* Add logging and alert notifications.
+   ```bash
+   git clone https://github.com/vincentcibin-a11y/network-monitoring-tool.git
+   cd network-monitoring-tool
+   ```
+
+2. Run the application:
+
+   ```bash
+   python NetWatch.py
+   ```
+
+   On Windows, you can also use:
+
+   ```bash
+   py NetWatch.py
+   ```
+
+## Example Menu
+
+```text
+========================================
+       NETWATCH - NETWORK MONITOR
+========================================
+1. Check Host Connectivity
+2. Scan Common Ports
+3. DNS Lookup
+4. Show Local IP
+5. Ping Test
+6. Exit
+```
+
+## Networking Concepts Demonstrated
+
+- IP addresses and hostnames
+- DNS resolution
+- TCP socket connections
+- Port numbers and service availability
+- Client-server communication
+- Network latency
+- Basic connectivity troubleshooting
+
+## Safety Notice
+
+Use this tool only on systems and networks you own or are authorized to test. Port scanning can be considered intrusive when performed without permission.
+
+## Future Enhancements
+
+- Add continuous monitoring and periodic refresh
+- Export results to CSV or JSON
+- Add network-interface information
+- Add logging and alert notifications
+- Build a graphical user interface
+- Add configurable ports and timeout values
+
+## Author
+
+**Cibin Vincent**
+
+GitHub: [vincentcibin-a11y](https://github.com/vincentcibin-a11y)
